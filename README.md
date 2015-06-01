@@ -23,23 +23,29 @@ Or install it yourself as:
 
 The simplest way is to say:
 
-  Sustore.put("myKey",someSerializableObject)
+```ruby
+Sustore.put("myKey",someSerializableObject)
+```
 
 and to later retrieve it as
 
-  Sunstore.get("myKey")
+```ruby
+Sunstore.get("myKey")
+```
 
 ## Configuration
 
 There are a couple of configuration parameters invoked via the config message *prior* to using:
 
-  Sunstore.config(params)
+```ruby
+Sunstore.config(params)
+```
 
 where the params can be:
 
-  :format: :json or :yaml (default)
-  :basename: the basename for the storage file (sunstore by default)
-  :basedir: the default location to put the file (Rails/tmp if used in Rails context, else current working directory)
+    :format: :json or :yaml (default)
+    :basename: the basename for the storage file (sunstore by default)
+    :basedir: the default location to put the file (Rails/tmp if used in Rails context, else current working directory)
 
 ## Development
 

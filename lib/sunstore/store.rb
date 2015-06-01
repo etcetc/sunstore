@@ -21,7 +21,7 @@ class Sunstore::Store
   def config(params={})
     @format = [:yaml,:json,nil].include?(params[:format]) ? params[:format] || :yaml : raise("Only yaml and json currently supported")
     @basename = params[:basename] || "sunstore"
-    @basedir = params[:basedir] ||  (defined?(Rails) ? Rails.root : Dir.getwd)
+    @basedir = params[:basedir] ||  (defined?(Rails) ? Rails.root.to_s : Dir.getwd)
     create_dir_structure(@basedir)
     @handler = Sunstore::Handler.for(format)
     @store_file = File.join(@basedir,"#{@basename}.#{@handler.type}")

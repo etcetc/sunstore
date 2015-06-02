@@ -1,5 +1,5 @@
 class Sunstore::Handler::YAML
-  require 'Psych'
+  require 'yaml'
 
   def serialize(h)
       h.to_yaml

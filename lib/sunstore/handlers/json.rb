@@ -1,6 +1,6 @@
 class Sunstore::Handler::JSON 
 
-  require 'JSON'
+  require 'json'
 
   def serialize(h)
       h.to_json
